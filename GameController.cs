@@ -19,18 +19,24 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update ()
 	{
-            if (!isActive){
-            this.isActive = true;
-                if (Input.GetKeyDown (KeyCode.Space)) {
-                    int n = 42;
-                    GameObject.Find("LeftHandPrefab").SendMessage("getSenerio", n);
-                    GameObject.Find("RightHandPrefab").SendMessage("getSenerio", n);
-                }
-            }
-            // 只有当所有手动作都做完后才能设置为非占用状态
-            if (!isActiveLeft && !isActiveRight){
-                this.isActive = false;
-            }
+            // if (!isActive){
+            // this.isActive = true;
+            //     if (Input.GetKeyDown (KeyCode.Space)) {
+            //         int n = 42;
+            //         GameObject.Find("LeftHandPrefab").SendMessage("getSenerio", n);
+            //         GameObject.Find("RightHandPrefab").SendMessage("getSenerio", n);
+            //     }
+            // }
+            // // 只有当所有手动作都做完后才能设置为非占用状态
+            // if (!isActiveLeft && !isActiveRight){
+            //     this.isActive = false;
+            // }
+        for (int i = 0; i < a.Length; i++)
+        {
+            Debug.Log(a[i]);
+            a[i] = i;
+        }
+
 	}
     
 }
