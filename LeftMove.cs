@@ -77,25 +77,6 @@ public class LeftMove : MonoBehaviour
                 mySequence.Append(transform.DOMove(origin.position,0.1f));
                 mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
                 mySequence.AppendCallback(callback);
-                
-                break;
-            case 5:
-
-                break;
-            case 6:
-
-                break;
-            case 7:
-
-                break;
-            case 8:
-
-                break;
-            case 9:
-
-                break;
-            case 10:
-
                 break;
             case 11:
                 SetActive(true);
@@ -122,27 +103,6 @@ public class LeftMove : MonoBehaviour
                 mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
                 mySequence.AppendCallback(callback);
                 break;
-            case 13:
-
-                break;
-            case 14:
-
-                break;
-            case 15:
-
-                break;
-            case 16:
-
-                break;
-            case 17:
-
-                break;
-            case 18:
-
-                break;
-            case 19:
-
-                break;
             case 20:
                 SetActive(true);
                 mySequence.Append(transform.DORotate(new Vector3(0,90,180),0.1f,RotateMode.WorldAxisAdd));
@@ -168,12 +128,6 @@ public class LeftMove : MonoBehaviour
                 mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
                 mySequence.AppendCallback(callback);
                 break;
-            case 22:
-
-                break;
-            case 23:
-
-                break;
             case 24:
                 SetActive(true);
                 mySequence.Append(transform.DORotate(new Vector3(-90,90,0),0.1f,RotateMode.WorldAxisAdd));
@@ -188,12 +142,6 @@ public class LeftMove : MonoBehaviour
                 mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
                 mySequence.AppendCallback(callback);
                 break;
-            case 25:
-
-                break;
-            case 26:
-
-                break;
             case 27:
                 SetActive(true);
                 hl._Idle();
@@ -206,9 +154,6 @@ public class LeftMove : MonoBehaviour
                 mySequence.Append(transform.DOMove(origin.position,0.1f));
                 mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
                 mySequence.AppendCallback(callback);
-                break;
-            case 28:
-
                 break;
             case 31:
                 SetActive(true);
@@ -227,6 +172,17 @@ public class LeftMove : MonoBehaviour
                 ScaleUp(mySequence,2);
                 hl._ThumbUp();
                 mySequence.Append(transform.DOMove(new Vector3(-0.1f,0.6f,0.6f),0.5f));
+                ScaleDown(mySequence);
+                mySequence.Append(transform.DOMove(origin.position,0.1f));
+                mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
+                mySequence.AppendCallback(callback);
+                break;
+            case 36:
+                SetActive(true);
+                hl._ThumbUp();
+                mySequence.Append(transform.DORotate(new Vector3(0,0,90),0.1f,RotateMode.WorldAxisAdd));
+                ScaleUp(mySequence,2);
+                mySequence.Append(transform.DOMove(new Vector3(-0.4f,0.6f,1),0.5f));
                 ScaleDown(mySequence);
                 mySequence.Append(transform.DOMove(origin.position,0.1f));
                 mySequence.Append(transform.DOLookAt(pointer.position,0.1f));

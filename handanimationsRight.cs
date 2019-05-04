@@ -34,9 +34,9 @@ public class handanimationsRight : MonoBehaviour
     }
 
     void Update(){}
-    // public void stop(){
-    //     this.anim.Speed = 0;
-    // }
+    public void stop(int x){
+        anim.ResetTrigger(x);
+    }
     // public void start(){
     //     anim.Play();
     // }

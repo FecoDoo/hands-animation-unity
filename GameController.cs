@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
         this.isActive = false;
         this.isActiveLeft = false;
         this.isActiveRight = false;
+        int[] array = new int[20];
     }
 
     // Update is called once per frame
@@ -21,7 +22,7 @@ public class GameController : MonoBehaviour
             if (!isActive){
             this.isActive = true;
                 if (Input.GetKeyDown (KeyCode.Space)) {
-                    int n = 32;
+                    int n = 42;
                     GameObject.Find("LeftHandPrefab").SendMessage("getSenerio", n);
                     GameObject.Find("RightHandPrefab").SendMessage("getSenerio", n);
                 }
