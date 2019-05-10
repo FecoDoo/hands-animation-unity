@@ -188,6 +188,31 @@ public class LeftMove : MonoBehaviour
                 mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
                 mySequence.AppendCallback(callback);
                 break;
+            case 44:
+                SetActive(true);
+                hl._Idle();
+                mySequence.Append(transform.DORotate(new Vector3(0,90,0),0.05f,RotateMode.WorldAxisAdd));
+                mySequence.Append(transform.DOMove(new Vector3(0,0.6f,0.6f),0.05f));
+                ScaleUp(mySequence,2);
+                mySequence.AppendInterval(1.8f);
+                ScaleDown(mySequence);
+                mySequence.Append(transform.DOMove(origin.position,0.1f));
+                mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
+                mySequence.AppendCallback(callback);
+                break;
+            case 45:
+                SetActive(true);
+                hl._Idle();
+                mySequence.Append(transform.DORotate(new Vector3(-90,180,0),0.05f,RotateMode.WorldAxisAdd));
+                mySequence.Append(transform.DORotate(new Vector3(0,0,-40),0.05f,RotateMode.WorldAxisAdd));
+                mySequence.Append(transform.DOMove(new Vector3(-0.2f,1,0.4f),0.05f));
+                ScaleUp(mySequence,2);
+                mySequence.AppendInterval(1);
+                ScaleDown(mySequence);
+                mySequence.Append(transform.DOMove(origin.position,0.1f));
+                mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
+                mySequence.AppendCallback(callback);
+                break;
         }
         
     }

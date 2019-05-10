@@ -583,6 +583,67 @@ public class RightMove : MonoBehaviour
                 mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
                 mySequence.AppendCallback(callback);
                 break;
+            case 43:
+                SetActive(true);
+                
+                mySequence.Append(transform.DORotate(new Vector3(-22,-166,0),0.1f,RotateMode.WorldAxisAdd));
+                hr._Peace();
+                mySequence.Append(transform.DOMove(new Vector3(0.13f,0.9f,0.6f),0.2f));
+                ScaleUp(mySequence,2);
+
+                mySequence.Append(transform.DOMove(new Vector3(0.23f,0.6f,0.6f),0.2f));
+                mySequence.Append(transform.DOLookAt(middle,0.2f));
+                mySequence.AppendInterval(0.5f);
+                ScaleDown(mySequence);
+                mySequence.Append(transform.DOMove(new Vector3(0.6f,1,0),0.1f));
+                mySequence.Append(transform.DOLookAt(new Vector3(0,1,0),0.1f));
+                ScaleUp(mySequence);
+                mySequence.AppendInterval(0.5f);
+                ScaleDown(mySequence);
+                mySequence.Append(transform.DOMove(origin.position,0.1f));
+                mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
+                mySequence.AppendCallback(callback);
+                break;
+            case 44:
+                SetActive(true);
+                
+                mySequence.Append(transform.DORotate(new Vector3(90,0,0),0.1f,RotateMode.WorldAxisAdd));
+                hr._Point();
+                mySequence.Append(transform.DOMove(new Vector3(0,1,0.6f),0.1f));
+                ScaleUp(mySequence,2);
+                mySequence.AppendInterval(1);
+                mySequence.Append(transform.DOMove(new Vector3(0,0.2f,0.6f),1));
+                ScaleDown(mySequence);
+                mySequence.Append(transform.DOMove(origin.position,0.1f));
+                mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
+                mySequence.AppendCallback(callback);
+                break;
+            case 45:
+                SetActive(true);
+                hr._Idle();
+                mySequence.Append(transform.DORotate(new Vector3(-90,180,0),0.05f,RotateMode.WorldAxisAdd));
+                mySequence.Append(transform.DORotate(new Vector3(0,0,40),0.05f,RotateMode.WorldAxisAdd));
+                mySequence.Append(transform.DOMove(new Vector3(0.2f,1,0.4f),0.05f));
+                ScaleUp(mySequence,2);
+                mySequence.AppendInterval(1);
+                ScaleDown(mySequence);
+                mySequence.Append(transform.DOMove(origin.position,0.1f));
+                mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
+                mySequence.AppendCallback(callback);
+                break;
+            case 46:
+                SetActive(true);
+                hr._Natural();
+                mySequence.Append(transform.DORotate(new Vector3(90,0,0),0.1f,RotateMode.WorldAxisAdd));
+                mySequence.Append(transform.DORotate(new Vector3(0,0,-90),0.1f,RotateMode.WorldAxisAdd));
+                mySequence.Append(transform.DOMove(new Vector3(0.1f,1.4f,0.6f),0.2f));
+                ScaleUp(mySequence,2);
+                mySequence.AppendInterval(1);
+                ScaleDown(mySequence);
+                mySequence.Append(transform.DOMove(origin.position,0.1f));
+                mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
+                mySequence.AppendCallback(callback);
+                break;
         }
     }
 
