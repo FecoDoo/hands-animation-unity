@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
             if (!isActive){
             this.isActive = true;
                 if (Input.GetKeyDown (KeyCode.Space)) {
-                    int n = 46;
+                    int n = 49;
                     GameObject.Find("LeftHandPrefab").SendMessage("getSenerio", n);
                     GameObject.Find("RightHandPrefab").SendMessage("getSenerio", n);
                 }
