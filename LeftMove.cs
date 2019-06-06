@@ -36,18 +36,14 @@ public class LeftMove : MonoBehaviour
     void Animation(int para){
         Sequence mySequence = DOTween.Sequence();
         switch(para){
-            case 0:
-                break;
-            case 1:
-                break;
             case 2:
                 SetActive(true);
                 hl._Point();
                 mySequence.Append(transform.DOMove(middle,0.1f));
                 mySequence.Append(transform.DORotate(new Vector3(-30,180,0),0.1f,RotateMode.WorldAxisAdd));
-                mySequence.Append(transform.DOScale(new Vector3(3,3,3),0.1f));
+                ScaleUp(mySequence,2);
                 mySequence.AppendInterval(1);
-                mySequence.Append(transform.DOScale(new Vector3(1,1,1),0.1f));
+                ScaleDown(mySequence);
                 mySequence.Append(transform.DOMove(origin.position,0.1f));
                 mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
                 mySequence.AppendCallback(callback);

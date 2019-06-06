@@ -50,15 +50,12 @@ public class RightMove : MonoBehaviour
                 mySequence.Append(transform.DORotate(this.flat,0.1f,RotateMode.WorldAxisAdd));
                 ScaleUp(mySequence);
                 mySequence.Append(transform.DOMove(new Vector3(0.6f,0.2f,0.6f),0.3f));
-                mySequence.AppendInterval(0.2f);
-                mySequence.Append(transform.DOMove(origin.position,0.1f));
+                mySequence.AppendInterval(0.3f);
                 ScaleDown(mySequence);
+                mySequence.Append(transform.DOMove(origin.position,0.1f));
                 mySequence.Append(transform.DOLookAt(pointer.position,0.1f));
                 mySequence.AppendCallback(callback);
                 
-                break;
-            case 2:
-
                 break;
             case 3:
                 SetActive(true);
